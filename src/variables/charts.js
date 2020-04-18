@@ -1,7 +1,15 @@
 // ##############################
 // // // javascript library for creating charts
 // #############################
+
+var MaterialDesign = require("assets/jss/material-dashboard-react.js");
 var Chartist = require("chartist");
+
+//const chartColors = [MaterialDesign.infoColor[0], MaterialDesign.successColor[0], MaterialDesign.roseColor[0], MaterialDesign.warningColor[0]];
+const chartColors = ['orange', 'blue', 'green','yellow'];
+const getLastWeekUsage = () => {
+  return [[12, 17, 7, 17, 23, 18, 38]];
+}
 
 // ##############################
 // // // variables used to create animation on charts
@@ -17,8 +25,8 @@ var delays2 = 80,
 
 const dailySalesChart = {
   data: {
-    labels: ["M", "T", "W", "T", "F", "S", "S"],
-    series: [[12, 17, 7, 17, 23, 18, 38]]
+    labels: ["Seg", "Ter", "Qua", "Qui", "Sex", "Sab", "Dom"],
+    series: getLastWeekUsage(),
   },
   options: {
     lineSmooth: Chartist.Interpolation.cardinal({
@@ -31,11 +39,12 @@ const dailySalesChart = {
       right: 0,
       bottom: 0,
       left: 0
-    }
+    },
+    showLabel: true,
   },
   // for animation
   animation: {
-    draw: function(data) {
+    draw: function (data) {
       if (data.type === "line" || data.type === "area") {
         data.element.animate({
           d: {
@@ -106,7 +115,7 @@ const emailsSubscriptionChart = {
       {
         seriesBarDistance: 5,
         axisX: {
-          labelInterpolationFnc: function(value) {
+          labelInterpolationFnc: function (value) {
             return value[0];
           }
         }
@@ -114,7 +123,7 @@ const emailsSubscriptionChart = {
     ]
   ],
   animation: {
-    draw: function(data) {
+    draw: function (data) {
       if (data.type === "bar") {
         data.element.animate({
           opacity: {
@@ -125,6 +134,45 @@ const emailsSubscriptionChart = {
             easing: "ease"
           }
         });
+      }
+    }
+  }
+};
+
+const percentageConsumptionChart = {
+  data: {
+    labels: [
+      "Ar-Condicionado",
+      "Tomadas",
+      "Iluminação",
+    ],
+    series: [5, 10, 15]
+  },
+  options:{
+    donut: true,
+    donutWidth: 35,
+
+  },
+  responsiveOptions: [
+    ['screen and (min-width: 640px)', {
+      chartPadding: 5,
+      labelOffset: 30,
+      labelDirection: 'explode',
+      labelInterpolationFnc: function (value) {
+        return value;
+      }
+    }],
+    ['screen and (min-width: 1024px)', {
+      labelOffset: 25,
+      chartPadding: 10
+    }]
+  ],
+  animation:{
+    draw: function(data) {
+      if(data.type === 'slice') {
+        if (chartColors[data.index]) {
+          data.element._node.setAttribute('style','stroke: ' + chartColors[data.index] + '; stroke-width: ' + 35 + 'px');
+        }
       }
     }
   }
@@ -153,7 +201,7 @@ const completedTasksChart = {
     }
   },
   animation: {
-    draw: function(data) {
+    draw: function (data) {
       if (data.type === "line" || data.type === "area") {
         data.element.animate({
           d: {
@@ -186,5 +234,6 @@ const completedTasksChart = {
 module.exports = {
   dailySalesChart,
   emailsSubscriptionChart,
-  completedTasksChart
+  completedTasksChart,
+  percentageConsumptionChart,
 };

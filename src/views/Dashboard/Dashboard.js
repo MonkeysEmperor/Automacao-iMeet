@@ -34,12 +34,15 @@ import { bugs, website, server } from "variables/general.js";
 import {
   dailySalesChart,
   emailsSubscriptionChart,
-  completedTasksChart
+  completedTasksChart,
+  percentageConsumptionChart,
 } from "variables/charts.js";
 
 import styles from "assets/jss/material-dashboard-react/views/dashboardStyle.js";
 
 const useStyles = makeStyles(styles);
+
+require('chartist-plugin-legend');
 
 export default function Dashboard() {
   const classes = useStyles();
@@ -134,12 +137,12 @@ export default function Dashboard() {
               />
             </CardHeader>
             <CardBody>
-              <h4 className={classes.cardTitle}>Daily Sales</h4>
+              <h4 className={classes.cardTitle}>Uso de energia na última semana</h4>
               <p className={classes.cardCategory}>
-                <span className={classes.successText}>
+                <span className={classes.dangerText}>
                   <ArrowUpward className={classes.upArrowCardCategory} /> 55%
                 </span>{" "}
-                increase in today sales.
+                em relação à semana anterior.
               </p>
             </CardBody>
             <CardFooter chart>
@@ -151,7 +154,29 @@ export default function Dashboard() {
         </GridItem>
         <GridItem xs={12} sm={12} md={4}>
           <Card chart>
-            <CardHeader color="warning">
+            <CardHeader color="primary">
+              <ChartistGraph
+                className="ct-chart"
+                data={percentageConsumptionChart.data}
+                type="Pie"
+                options={percentageConsumptionChart.options}
+                responsiveOptions={percentageConsumptionChart.responsiveOptions}
+              />
+            </CardHeader>
+            <CardBody>
+              <h4 className={classes.cardTitle}>Uso de energia por equipamento</h4>
+              <p className={classes.cardCategory}>Last Campaign Performance</p>
+            </CardBody>
+            <CardFooter chart>
+              <div className={classes.stats}>
+                <AccessTime /> campaign sent 2 days ago
+              </div>
+            </CardFooter>
+          </Card>
+        </GridItem>
+        <GridItem xs={12} sm={12} md={4}>
+          <Card chart>
+            <CardHeader color="info">
               <ChartistGraph
                 className="ct-chart"
                 data={emailsSubscriptionChart.data}
