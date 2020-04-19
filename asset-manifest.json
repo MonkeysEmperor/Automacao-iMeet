@@ -1,22 +1,31 @@
 {
   "files": {
-    "main.css": "/material-dashboard-react/static/css/main.371bec57.chunk.css",
-    "main.js": "/material-dashboard-react/static/js/main.e3f7e3e7.chunk.js",
-    "main.js.map": "/material-dashboard-react/static/js/main.e3f7e3e7.chunk.js.map",
-    "runtime~main.js": "/material-dashboard-react/static/js/runtime~main.ce1216ca.js",
-    "runtime~main.js.map": "/material-dashboard-react/static/js/runtime~main.ce1216ca.js.map",
-    "static/css/2.d0176e96.chunk.css": "/material-dashboard-react/static/css/2.d0176e96.chunk.css",
-    "static/js/2.d2ee29e5.chunk.js": "/material-dashboard-react/static/js/2.d2ee29e5.chunk.js",
-    "static/js/2.d2ee29e5.chunk.js.map": "/material-dashboard-react/static/js/2.d2ee29e5.chunk.js.map",
-    "index.html": "/material-dashboard-react/index.html",
-    "precache-manifest.d811b4e808377076dac069b87ef38f1e.js": "/material-dashboard-react/precache-manifest.d811b4e808377076dac069b87ef38f1e.js",
-    "service-worker.js": "/material-dashboard-react/service-worker.js",
-    "static/css/2.d0176e96.chunk.css.map": "/material-dashboard-react/static/css/2.d0176e96.chunk.css.map",
-    "static/css/main.371bec57.chunk.css.map": "/material-dashboard-react/static/css/main.371bec57.chunk.css.map",
-    "static/media/marc.jpg": "/material-dashboard-react/static/media/marc.8880a65c.jpg",
-    "static/media/sidebar-1.jpg": "/material-dashboard-react/static/media/sidebar-1.8e9f0a3c.jpg",
-    "static/media/sidebar-2.jpg": "/material-dashboard-react/static/media/sidebar-2.310509c9.jpg",
-    "static/media/sidebar-3.jpg": "/material-dashboard-react/static/media/sidebar-3.25031690.jpg",
-    "static/media/sidebar-4.jpg": "/material-dashboard-react/static/media/sidebar-4.fc9cb053.jpg"
-  }
+    "main.css": "/automacao-imeet/static/css/main.6b9dcdb7.chunk.css",
+    "main.js": "/automacao-imeet/static/js/main.d5cab3c0.chunk.js",
+    "main.js.map": "/automacao-imeet/static/js/main.d5cab3c0.chunk.js.map",
+    "runtime-main.js": "/automacao-imeet/static/js/runtime-main.5e3f1185.js",
+    "runtime-main.js.map": "/automacao-imeet/static/js/runtime-main.5e3f1185.js.map",
+    "static/css/2.d0176e96.chunk.css": "/automacao-imeet/static/css/2.d0176e96.chunk.css",
+    "static/js/2.ee85883c.chunk.js": "/automacao-imeet/static/js/2.ee85883c.chunk.js",
+    "static/js/2.ee85883c.chunk.js.map": "/automacao-imeet/static/js/2.ee85883c.chunk.js.map",
+    "index.html": "/automacao-imeet/index.html",
+    "precache-manifest.46e863c7084353faca0759b20bdd75ff.js": "/automacao-imeet/precache-manifest.46e863c7084353faca0759b20bdd75ff.js",
+    "service-worker.js": "/automacao-imeet/service-worker.js",
+    "static/css/2.d0176e96.chunk.css.map": "/automacao-imeet/static/css/2.d0176e96.chunk.css.map",
+    "static/css/main.6b9dcdb7.chunk.css.map": "/automacao-imeet/static/css/main.6b9dcdb7.chunk.css.map",
+    "static/js/2.ee85883c.chunk.js.LICENSE.txt": "/automacao-imeet/static/js/2.ee85883c.chunk.js.LICENSE.txt",
+    "static/js/main.d5cab3c0.chunk.js.LICENSE.txt": "/automacao-imeet/static/js/main.d5cab3c0.chunk.js.LICENSE.txt",
+    "static/media/marc.jpg": "/automacao-imeet/static/media/marc.8880a65c.jpg",
+    "static/media/sidebar-1.jpg": "/automacao-imeet/static/media/sidebar-1.8e9f0a3c.jpg",
+    "static/media/sidebar-2.jpg": "/automacao-imeet/static/media/sidebar-2.310509c9.jpg",
+    "static/media/sidebar-3.jpg": "/automacao-imeet/static/media/sidebar-3.25031690.jpg",
+    "static/media/sidebar-4.jpg": "/automacao-imeet/static/media/sidebar-4.fc9cb053.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5e3f1185.js",
+    "static/css/2.d0176e96.chunk.css",
+    "static/js/2.ee85883c.chunk.js",
+    "static/css/main.6b9dcdb7.chunk.css",
+    "static/js/main.d5cab3c0.chunk.js"
+  ]
 }
