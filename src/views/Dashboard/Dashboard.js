@@ -154,13 +154,14 @@ export default function Dashboard() {
         </GridItem>
         <GridItem xs={12} sm={12} md={4}>
           <Card chart>
-            <CardHeader color="primary">
+            <CardHeader color="rose">
               <ChartistGraph
                 className="ct-chart"
                 data={percentageConsumptionChart.data}
                 type="Pie"
                 options={percentageConsumptionChart.options}
                 responsiveOptions={percentageConsumptionChart.responsiveOptions}
+                listener={percentageConsumptionChart.animation}
               />
             </CardHeader>
             <CardBody>

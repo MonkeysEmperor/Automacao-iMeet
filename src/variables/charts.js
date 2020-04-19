@@ -5,11 +5,14 @@
 var MaterialDesign = require("assets/jss/material-dashboard-react.js");
 var Chartist = require("chartist");
 
-//const chartColors = [MaterialDesign.infoColor[0], MaterialDesign.successColor[0], MaterialDesign.roseColor[0], MaterialDesign.warningColor[0]];
-const chartColors = ['orange', 'blue', 'green','yellow'];
+const chartColors = [MaterialDesign.infoColor[0], MaterialDesign.successColor[0],  MaterialDesign.warningColor[0], MaterialDesign.roseColor[0]];
+//const chartColors = ['orange', 'blue', 'green','yellow'];
 const getLastWeekUsage = () => {
-  return [[12, 17, 7, 17, 23, 18, 38]];
+  const rand = Math.random()
+
+  return rand > 0.5 ? [[26, 50, 20, 17, 5, 1, 0]] : [[12, 17, 7, 17, 23, 18, 38]]
 }
+
 
 // ##############################
 // // // variables used to create animation on charts
@@ -163,7 +166,7 @@ const percentageConsumptionChart = {
       }
     }],
     ['screen and (min-width: 1024px)', {
-      labelOffset: 25,
+      labelOffset: 30,
       chartPadding: 10
     }]
   ],
@@ -173,6 +176,40 @@ const percentageConsumptionChart = {
         if (chartColors[data.index]) {
           data.element._node.setAttribute('style','stroke: ' + chartColors[data.index] + '; stroke-width: ' + 35 + 'px');
         }
+        // Get the total path length in order to use for dash array animation
+        var pathLength = data.element._node.getTotalLength();
+    
+        // Set a dasharray that matches the path length as prerequisite to animate dashoffset
+        data.element.attr({
+          'stroke-dasharray': pathLength + 'px ' + pathLength + 'px'
+        });
+    
+        // Create animation definition while also assigning an ID to the animation for later sync usage
+        var animationDefinition = {
+          'stroke-dashoffset': {
+            id: 'anim' + data.index,
+            dur: 500,
+            from: -pathLength + 'px',
+            to:  '0px',
+            easing: Chartist.Svg.Easing.easeOutQuint,
+            // We need to use `fill: 'freeze'` otherwise our animation will fall back to initial (not visible)
+            fill: 'freeze'
+          }
+        };
+    
+        // If this was not the first slice, we need to time the animation so that it uses the end sync event of the previous animation
+        if(data.index !== 0) {
+          animationDefinition['stroke-dashoffset'].begin = 'anim' + (data.index - 1) + '.end';
+        }
+    
+        // We need to set an initial value before the animation starts as we are not in guided mode which would do that for us
+        data.element.attr({
+          'stroke-dashoffset': -pathLength + 'px'
+        });
+    
+        // We can't use guided mode as the animations need to rely on setting begin manually
+        // See http://gionkunz.github.io/chartist-js/api-documentation.html#chartistsvg-function-animate
+        data.element.animate(animationDefinition, false);
       }
     }
   }
