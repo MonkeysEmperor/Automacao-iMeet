@@ -7,7 +7,7 @@ var Chartist = require("chartist");
 
 const chartColors = [MaterialDesign.infoColor[0], MaterialDesign.successColor[0],  MaterialDesign.warningColor[0], MaterialDesign.roseColor[0]];
 //const chartColors = ['orange', 'blue', 'green','yellow'];
-const getLastWeekUsage = () => {
+const getLastWeekUsage = (filter) => {
   const rand = Math.random()
 
   return rand > 0.5 ? [[26, 45, 20, 17, 5, 1, 0]] : [[12, 17, 7, 17, 23, 18, 38]]
@@ -28,9 +28,10 @@ var delays2 = 80,
 
 const dailySalesChart = {
   data: {
-    labels: ["Seg", "Ter", "Qua", "Qui", "Sex", "Sab", "Dom"],
-    series: getLastWeekUsage(),
-  },
+      labels: ["Seg", "Ter", "Qua", "Qui", "Sex", "Sab", "Dom"],
+      series: getLastWeekUsage(),
+    },
+
   options: {
     lineSmooth: Chartist.Interpolation.cardinal({
       tension: 0

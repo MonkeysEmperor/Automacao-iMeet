@@ -16,6 +16,7 @@ import Accessibility from "@material-ui/icons/Accessibility";
 import BugReport from "@material-ui/icons/BugReport";
 import Code from "@material-ui/icons/Code";
 import Cloud from "@material-ui/icons/Cloud";
+import FlashOnIcon from '@material-ui/icons/FlashOn';
 // core components
 import GridItem from "components/Grid/GridItem.js";
 import GridContainer from "components/Grid/GridContainer.js";
@@ -28,7 +29,6 @@ import CardHeader from "components/Card/CardHeader.js";
 import CardIcon from "components/Card/CardIcon.js";
 import CardBody from "components/Card/CardBody.js";
 import CardFooter from "components/Card/CardFooter.js";
-
 import { bugs, website, server } from "variables/general.js";
 
 import {
@@ -36,6 +36,7 @@ import {
   emailsSubscriptionChart,
   completedTasksChart,
   percentageConsumptionChart,
+  updateDailySalesChart,
 } from "variables/charts.js";
 
 import styles from "assets/jss/material-dashboard-react/views/dashboardStyle.js";
@@ -46,6 +47,7 @@ require('chartist-plugin-legend');
 
 export default function Dashboard() {
   const classes = useStyles();
+  let changed = true;
   return (
     <div>
       <GridContainer>
@@ -125,7 +127,7 @@ export default function Dashboard() {
         </GridItem>
       </GridContainer>
       <GridContainer>
-        <GridItem xs={12} sm={12} md={4}>
+        <GridItem xs={12 + 0.1*changed} sm={12} md={4}>
           <Card chart>
             <CardHeader color="success">
               <ChartistGraph
@@ -144,6 +146,7 @@ export default function Dashboard() {
                 </span>{" "}
                 em relação à semana anterior.
               </p>
+
             </CardBody>
             <CardFooter chart>
               <div className={classes.stats}>
@@ -212,6 +215,7 @@ export default function Dashboard() {
             <CardBody>
               <h4 className={classes.cardTitle}>Ocupação das salas</h4>
               <p className={classes.cardCategory}>último dia útil</p>
+              
             </CardBody>
             <CardFooter chart>
               <div className={classes.stats}>

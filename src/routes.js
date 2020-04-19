@@ -46,8 +46,8 @@ const dashboardRoutes = [
     layout: "/admin"
   },
   {
-    path: "/user",
-    name: "User Profile",
+    path: "/meeting",
+    name: "Agendar Reunião",
     rtlName: "ملف تعريفي للمستخدم",
     icon: Person,
     component: UserProfile,
