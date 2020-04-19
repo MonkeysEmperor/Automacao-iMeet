@@ -10,7 +10,7 @@ const chartColors = [MaterialDesign.infoColor[0], MaterialDesign.successColor[0]
 const getLastWeekUsage = () => {
   const rand = Math.random()
 
-  return rand > 0.5 ? [[26, 50, 20, 17, 5, 1, 0]] : [[12, 17, 7, 17, 23, 18, 38]]
+  return rand > 0.5 ? [[26, 45, 20, 17, 5, 1, 0]] : [[12, 17, 7, 17, 23, 18, 38]]
 }
 
 

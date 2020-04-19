@@ -55,9 +55,9 @@ export default function Dashboard() {
               <CardIcon color="warning">
                 <Icon>content_copy</Icon>
               </CardIcon>
-              <p className={classes.cardCategory}>Used Space</p>
+              <p className={classes.cardCategory}>Horas reservadas hoje</p>
               <h3 className={classes.cardTitle}>
-                49/50 <small>GB</small>
+                44/48 <small>h</small>
               </h3>
             </CardHeader>
             <CardFooter stats>
@@ -66,7 +66,7 @@ export default function Dashboard() {
                   <Warning />
                 </Danger>
                 <a href="#pablo" onClick={e => e.preventDefault()}>
-                  Get more space
+                  Ver agenda de hoje
                 </a>
               </div>
             </CardFooter>
@@ -78,8 +78,8 @@ export default function Dashboard() {
               <CardIcon color="success">
                 <Store />
               </CardIcon>
-              <p className={classes.cardCategory}>Revenue</p>
-              <h3 className={classes.cardTitle}>$34,245</h3>
+              <p className={classes.cardCategory}>Gasto estimado último mês</p>
+              <h3 className={classes.cardTitle}>R$34.245</h3>
             </CardHeader>
             <CardFooter stats>
               <div className={classes.stats}>
@@ -166,7 +166,7 @@ export default function Dashboard() {
             </CardHeader>
             <CardBody>
               <h4 className={classes.cardTitle}>Uso de energia por equipamento</h4>
-              <p className={classes.cardCategory}>Last Campaign Performance</p>
+              <p className={classes.cardCategory}>Último mês</p>
             </CardBody>
             <CardFooter chart>
               <div className={classes.stats}>
@@ -188,7 +188,7 @@ export default function Dashboard() {
               />
             </CardHeader>
             <CardBody>
-              <h4 className={classes.cardTitle}>Email Subscriptions</h4>
+              <h4 className={classes.cardTitle}>Tendência anual</h4>
               <p className={classes.cardCategory}>Last Campaign Performance</p>
             </CardBody>
             <CardFooter chart>
@@ -210,12 +210,12 @@ export default function Dashboard() {
               />
             </CardHeader>
             <CardBody>
-              <h4 className={classes.cardTitle}>Completed Tasks</h4>
-              <p className={classes.cardCategory}>Last Campaign Performance</p>
+              <h4 className={classes.cardTitle}>Ocupação das salas</h4>
+              <p className={classes.cardCategory}>último dia útil</p>
             </CardBody>
             <CardFooter chart>
               <div className={classes.stats}>
-                <AccessTime /> campaign sent 2 days ago
+                <AccessTime /> último dia útil
               </div>
             </CardFooter>
           </Card>
