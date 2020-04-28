@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Automacao-iMeet/precache-manifest.b852c4e87bdd5f5aea47c528d23b07cb.js"
+  "/Automacao-iMeet/precache-manifest.8bc5143b2e8ecd78d7463aa313daa97a.js"
 );
 
 self.addEventListener('message', (event) => {

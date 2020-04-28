@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/Automacao-iMeet/static/css/main.6b9dcdb7.chunk.css",
-    "main.js": "/Automacao-iMeet/static/js/main.e1cd82fb.chunk.js",
-    "main.js.map": "/Automacao-iMeet/static/js/main.e1cd82fb.chunk.js.map",
+    "main.js": "/Automacao-iMeet/static/js/main.c040e485.chunk.js",
+    "main.js.map": "/Automacao-iMeet/static/js/main.c040e485.chunk.js.map",
     "runtime-main.js": "/Automacao-iMeet/static/js/runtime-main.d0e45818.js",
     "runtime-main.js.map": "/Automacao-iMeet/static/js/runtime-main.d0e45818.js.map",
     "static/css/2.d0176e96.chunk.css": "/Automacao-iMeet/static/css/2.d0176e96.chunk.css",
-    "static/js/2.b8ffc4bc.chunk.js": "/Automacao-iMeet/static/js/2.b8ffc4bc.chunk.js",
-    "static/js/2.b8ffc4bc.chunk.js.map": "/Automacao-iMeet/static/js/2.b8ffc4bc.chunk.js.map",
+    "static/js/2.62207835.chunk.js": "/Automacao-iMeet/static/js/2.62207835.chunk.js",
+    "static/js/2.62207835.chunk.js.map": "/Automacao-iMeet/static/js/2.62207835.chunk.js.map",
     "index.html": "/Automacao-iMeet/index.html",
-    "precache-manifest.b852c4e87bdd5f5aea47c528d23b07cb.js": "/Automacao-iMeet/precache-manifest.b852c4e87bdd5f5aea47c528d23b07cb.js",
+    "precache-manifest.8bc5143b2e8ecd78d7463aa313daa97a.js": "/Automacao-iMeet/precache-manifest.8bc5143b2e8ecd78d7463aa313daa97a.js",
     "service-worker.js": "/Automacao-iMeet/service-worker.js",
     "static/css/2.d0176e96.chunk.css.map": "/Automacao-iMeet/static/css/2.d0176e96.chunk.css.map",
     "static/css/main.6b9dcdb7.chunk.css.map": "/Automacao-iMeet/static/css/main.6b9dcdb7.chunk.css.map",
-    "static/js/2.b8ffc4bc.chunk.js.LICENSE.txt": "/Automacao-iMeet/static/js/2.b8ffc4bc.chunk.js.LICENSE.txt",
-    "static/js/main.e1cd82fb.chunk.js.LICENSE.txt": "/Automacao-iMeet/static/js/main.e1cd82fb.chunk.js.LICENSE.txt",
+    "static/js/2.62207835.chunk.js.LICENSE.txt": "/Automacao-iMeet/static/js/2.62207835.chunk.js.LICENSE.txt",
+    "static/js/main.c040e485.chunk.js.LICENSE.txt": "/Automacao-iMeet/static/js/main.c040e485.chunk.js.LICENSE.txt",
     "static/media/marc.jpg": "/Automacao-iMeet/static/media/marc.8880a65c.jpg",
     "static/media/sidebar-1.jpg": "/Automacao-iMeet/static/media/sidebar-1.8e9f0a3c.jpg",
     "static/media/sidebar-2.jpg": "/Automacao-iMeet/static/media/sidebar-2.310509c9.jpg",
@@ -24,8 +24,8 @@
   "entrypoints": [
     "static/js/runtime-main.d0e45818.js",
     "static/css/2.d0176e96.chunk.css",
-    "static/js/2.b8ffc4bc.chunk.js",
+    "static/js/2.62207835.chunk.js",
     "static/css/main.6b9dcdb7.chunk.css",
-    "static/js/main.e1cd82fb.chunk.js"
+    "static/js/main.c040e485.chunk.js"
   ]
 }
